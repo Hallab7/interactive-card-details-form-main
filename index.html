@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    
+    <title>Interactive card details form</title>
+    <link rel="stylesheet" href="main5.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="upper-container">
+        <div class="blue-atm">
+          <div class="mini-blue">
+          <div class="card-logo">
+          <svg width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff"/><path d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z" stroke="#fff"/></svg>
+          </div>
+          <div class="card-no" id="cardNo">  0000  0000  0000  0000 </div>
+          <div class="card-name" id="cardName"> <h3> Jane Appleseed </h3> </div> 
+          <div class="exp-no" id="expNo"> <h3> 00/00 </h3></div>
+        </div>
+      </div>
+        <div class="white-atm">
+         <div class="cvv" id="cvv"> <h3> 000 </h3> </div>
+        </div>
+      </div>
+      <div class="lower-container">
+        <div class="form">
+        <form action="index2.html" id="form">  
+            Cardholder Name
+            <input type="text" placeholder="e.g. Jane Appleseed" id="CardHolderName" width="100%" oninput="cardHolderName()" onkeydown="return /[a-zA-z ]/i.test(event.key)" required>
+  
+
+            Card Number
+            <input type="number" placeholder="e.g. 1234 5678 9123 0000" id="CardHolderNumber" maxlength="16" max="9999999999999999" min="1000000000000000"  width="100%" oninput="cardHolderNumber()" required>
+  
+
+            Exp. Date (MM/YY)
+            <input type="month" placeholder="MM" id="Month" width="50%" oninput="expDate()" required>
+            <!--<input type="date" placeholder="YY" name="Year" required> -->
+            CVC
+            <input type="number" id="cvc" max="999" min="100" placeholder="e.g. 123" width="50%" oninput="cardCVC()" required>
+            <a href="index2.html"><button type="submit" class="confirm" onclick="confirm()">Confirm</button> </a>
+          </form>
+            <!-- Completed state start -->
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
